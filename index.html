@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Resimler/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Ggiyim</title>
+    
+    <script>
+      //   window.onload = function() {
+      //   // Sayfa yüklendiğinde çalışacak kodlar burada yer alacak
+      //   setInterval(function() {
+      //     // Belirli aralıklarla çalışacak kodlar burada yer alacak
+      //     for (let i = 0; i < 3; i++) {
+      //       // 50 adet kar tane oluşturulacak
+      //       let snow = document.createElement("div");
+      //       snow.classList.add("snow");
+      //       snow.style.top = Math.random() * window.innerHeight + "px";
+      //       snow.style.left = Math.random() * window.innerWidth + "px";
+      //       document.body.appendChild(snow);
+      //     }
+      //   }, 500);
+      
+      //   setInterval(function() {
+      //     // Belirli aralıklarla çalışacak kodlar burada yer alacak
+      //     let snowElements = document.querySelectorAll(".snow");
+      //     for (let i = 0; i < snowElements.length; i++) {
+      //       let snow = snowElements[i];
+      //       snow.style.top = parseInt(snow.style.top) + 2 + "px";
+      //       snow.style.left = parseInt(snow.style.left) + Math.random() * 2 - 1 + "px";
+      
+      //       if (parseInt(snow.style.top) > window.innerHeight) {
+      //         // Kar tanesinin pencere dışına çıktığı durumda
+      //         document.body.removeChild(snow); // Kar tanesini sil
+      //       }
+      //     }
+      //   }, 50);
+      // };
+      
+      let slideIndex = 1;
+                            showSlides(slideIndex);
+                            
+                            function plusSlides(n) {
+                              //n = 1;
+                              showSlides(slideIndex += n);
+                            }
+                            
+                            function currentSlide(n) {
+                              showSlides(slideIndex = n);
+                            }
+                            
+                            function showSlides(n) {
+                              let i;
+                              let slides = document.getElementsByClassName("mySlides");
+                              let dots = document.getElementsByClassName("dot");
+                              if (n > slides.length) {slideIndex = 1}    
+                              if (n < 1) {slideIndex = slides.length}
+                              for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";  
+                              }
+                              for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                              }
+                              slides[slideIndex-1].style.display = "block";  
+                              dots[slideIndex-1].className += " active";
+                            }
+     </script>
+</head>
+<body>
+    <div class="container">
+         <!-- <header><img src="Resimler/denemebanner.webp"></header> -->
+        <div class="navbar">
+            <img src="Resimler/logoogogo.png" class="logo">
+            <nav>
+                <ul>
+                    <li> <form>
+                        <div id="box">
+                            <input type="text" id="search" placeholder="Ara..">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </form></li>
+                    <li><a href="Yeni Sayfalar/Kayit.html">Kayıt</a></li>
+                    <li><a href="Yeni Sayfalar/giris.html">Giriş</a></li>
+                    <li><a href="Yeni Sayfalar/hakkinda.html">Hakkımızda</a></li>
+                    <li><a href="Yeni Sayfalar/iletisim.html">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <article>
+          <div class="row">
+            <div class="col">
+                <h1>Ggiyim</h1> <br>
+                <p>Kalite Ve Canavar Ürünler</p>
+                <a href="Yeni Sayfalar/kesfet.html">
+                    <button type="button">Keşfet</button>
+                </a>               
+            </div>
+        </article>
+
+            <aside class="as1">
+              <div class="col">
+                <a href="Yeni Sayfalar/tisort.html">
+                    <div class="card card1"> 
+                        <h5>Tişört</h5>
+                     </div>
+                    </a>
+
+                    <br>
+
+                <a href="Yeni Sayfalar/hoodie.html">
+                <div class="card card2">
+                    <h5>Hoodie</h5>
+                </div>
+                    </a>  
+
+                    <br>
+                    <a href="Yeni Sayfalar/esofman.html">
+                <div class="card card3">
+                    <h5>Eşofman</h5>
+                </div> 
+              </a>
+              <br>
+            </aside>
+
+            <aside class="as2">
+              <div class="slideshow-container">
+            
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="Resimler/yeniyılindirim.jpg"  class="slfoto">
+                  <div class="text">Yeni Yıl İndirimlerimiz Başlamıştır</div>
+                </div>
+                  
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="resimler/indirim-1495.jpg"  class="slfoto">
+                  <div class="text">İndirimler</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3/ 3</div>
+                  <img src="Resimler/yeniurunlarr.jpg" class="slfoto" >
+                  <div class="text">Yeni Ürünlerimiz geldi</div>
+                </div>
+                
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </aside>
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
